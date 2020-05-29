@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="./computer.png" type="image/png/jpg">
 
 
 
@@ -46,12 +47,10 @@ $(document).ready(function(){
  
      fileTarget.on('change', function(){
          if(window.FileReader){
-             // 파일명 추출
              var filename = $(this)[0].files[0].name;
          } 
  
          else {
-             // Old IE 파일명 추출
              var filename = $(this).val().split('/').pop().split('\\').pop();
          };
  
@@ -66,7 +65,6 @@ $(document).ready(function(){
          parent.children('.upload-display').remove();
  
          if(window.FileReader){
-             //image 파일만
              if (!$(this)[0].files[0].type.match(/image\//)) return;
              
              var reader = new FileReader();
