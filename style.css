@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    font-family:'Manrope', 'Droid Arabic naskh';
+    background: #162447;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background: #e43f5a;
+    border-radius: 100px;
+}
+
+.container{
+    width: 100%;
+    height:300px;
+    box-shadow: 0 0 100px #1b1b2f;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.container textarea{
+    width: 50%; 
+    height: 50%;
+    padding: 10px;
+    font-family:'Manrope', 'Droid Arabic naskh';
+    font-size: 15px;
+    resize: none;
+    border: none;
+    border-radius: 5px;
+    background: #f9f9f9;
+    margin-top: 10px;
+}
+.container button{
+    padding: 10px;
+    margin: 10px;
+    width: 51.5%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: #e43f5a;
+    font-family:'Manrope', 'Droid Arabic naskh';
+    font-size: 19px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+
+.post{
+    width: 60%;
+    height: auto;
+    background: white;
+    color: black;
+    padding: 10px;
+    position: relative;
+    display: block !important;
+    margin: 10px auto;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    animation: animate 1s;
+}
+@keyframes animate{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.post a{
+    text-decoration: none;
+    color: tomato;
+    margin: 0;
+}
+.post .header{
+    width: 90%;
+    height: 50px;
+    line-height:50px;
+    border-bottom: 1px solid #f3f3f3;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+.post .footer{
+    width: 90%;
+    height: auto;
+    line-height:50px;
+    border-top: 1px solid #f3f3f3;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+.post .content{
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 2% auto;
+    position: relative;
+    font-weight: lighter;
+    overflow: hidden;
+}
+.content img{
+    margin: 5px 0;
+}
+.post .footer input{
+    width: 50%;
+    height: 20px;
+    padding: 10px;
+    border: none;
+    background: #f9f9f9;
+    font-size: 15px;
+    border-radius: 4px;
+    font-family:'Manrope', 'Droid Arabic naskh';
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+ .Comment{
+    color: darkblue !important;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    line-height: 0;
+
+}
+.post .footer .btn-setComment{
+    padding: 10px;
+    border: none;
+    background:#162447;
+    color: white;
+    font-size: 15px;
+    border-radius: 4px;
+    font-family:'Manrope', 'Droid Arabic naskh';
+    margin: 0 5px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+.box{
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+#timer{
+ text-align: right;
+ position: absolute;
+ top: 0;
+ right: 0;
+ margin: 0;
+ padding: 5px;
+}
+.ContainerPopup{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.178);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.popup{
+    width: 400px;
+    height: auto;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    animation: animate 1s;
+}
+.popup h1{
+    font-size: 18px;
+    font-weight: lighter;
+
+}
+.content img{
+    width: 100%;
+}
+.filebox input[type="file"] {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip:rect(0,0,0,0);
+	border: 0;
+}
+
+.filebox label {
+	display: inline-block;
+	padding: .5em .75em;
+	color: #999;
+	font-size: inherit;
+	line-height: normal;
+	vertical-align: middle;
+	background-color: #fdfdfd;
+	cursor: pointer;
+	border: 1px solid #ebebeb;
+	border-bottom-color: #e2e2e2;
+	border-radius: .25em;
+}
+
+/* named upload */
+.filebox .upload-name {
+	display: inline-block;
+	padding: .5em .75em;
+	font-size: inherit;
+	font-family: inherit;
+	line-height: normal;
+	vertical-align: middle;
+	background-color: #f5f5f5;
+  border: 1px solid #ebebeb;
+  border-bottom-color: #e2e2e2;
+  border-radius: .25em;
+  -webkit-appearance: none; /* 네이티브 외형 감추기 */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* imaged preview */
+.filebox .upload-display {
+	margin-bottom: 5px;
+}
+
+@media(min-width: 768px) {
+	.filebox .upload-display {
+		display: inline-block;
+		margin-right: 5px;
+		margin-bottom: 0;
+	}
+}
+
+.filebox .upload-thumb-wrap {
+	display: inline-block;
+	width: 54px;
+	padding: 2px;
+	vertical-align: middle;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background-color: #fff;
+}
+
+.filebox .upload-display img {
+	display: block;
+	max-width: 100%;
+	width: 100% \9;
+	height: auto;
+}
+
+.filebox.bs3-primary label {
+  color: #fff;
+  background-color: #337ab7;
+	border-color: #2e6da4;
+}
+
+@media only screen and (max-width:480px){
+    .popup{
+        width: 90%;
+    }
+}
+@media only screen and (max-width:767px){
+    .container textarea{
+        width: 89% !important;
+    }
+    .container button{
+        width: 91.5% !important;
+    }
+    .post{
+        width: 90%;
+    }
+    .btn-setComment{
+        width: 100% !important;
+        display: block !important;
+        margin:  0 auto !important;
+        text-align: center;
+    }
+    .footer input{
+        width: 98% !important;
+        padding-right: 0 !important;
+    }
+    .Comment{
+        position: relative;
+    }
+    .footer{
+        height: auto !important;
+    }
+    .filebox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .upload-display{
+        margin: 0 5px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px){
+    .container textarea{
+        width: 60% !important;
+    }
+    .container button{
+        width: 61.5% !important;
+    }
+    .post{
+        width: 70%;
+    }
+}
